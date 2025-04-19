@@ -1,0 +1,106 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+header {
+  background-color: #0059b3; /* Azul más claro */
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+}
+
+main {
+  padding: 2em;
+}
+
+#trivia-container {
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  margin: 1em 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+#opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.opcion {
+  background-color: #0b16a6;
+  padding: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex-grow: 1;
+  flex-basis: 40%;
+  max-width: 45%;
+  text-align: center;
+  word-break: break-word;
+}
+
+.opcion:hover {
+background-color: #6c24b1;
+}
+
+@media (max-width: 600px) {
+  .opcion {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+.oculto {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #0059b3;
+  color: white;
+  padding: 1em;
+}
