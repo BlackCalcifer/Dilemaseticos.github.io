@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inicio - Manual Ético en Enfermería</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logop.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Pantalla de carga */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #cceeff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    #loader.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #loader img {
+      width: 500px;
+      height: auto;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Ocultar contenido mientras carga */
+    body:not(.loaded) main,
+    body:not(.loaded) header,
+    body:not(.loaded) footer {
+      visibility: hidden;
+    }
+  </style>
 </head>
 <body>
+  <!-- Pantalla de carga -->
+  <div id="loader">
+    <img src="logop.png" alt="Cargando..." />
+  </div>
+
   <header>
     <h1>Manual Ético Interactivo en Enfermería</h1>
     <nav>
@@ -17,11 +65,11 @@
           <div class="dropdown-content">
             <a href="infografia.html">Infografías</a>
             <a href="trivia.html">Trivia Ética</a>
-            <a href="elige.html">Simulación</a>
+            <a href="simulacion.html">Simulación</a>
           </div>
         </li>
         <li><a href="buscador.html">Buscador Legal</a></li>
-		<li><a href="recursos.html">Recursos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
         <li><a href="constitucion.html">Constitución y Código</a></li>
       </ul>
     </nav>
@@ -30,12 +78,42 @@
   <main>
     <section>
       <h2>Bienvenida</h2>
-      <p>Bienvenido al Manual Ético Interactivo en Enfermería. Aquí encontrarás herramientas prácticas, casos reales, y recursos legales que te permitirán tomar decisiones éticas fundamentadas en tu ejercicio profesional.</p>
+      <p>Bienvenido al <strong>Manual Ético Interactivo en Enfermería</strong>, una herramienta diseñada para fortalecer tu capacidad crítica y ética en el ejercicio profesional. Aquí encontrarás un espacio dinámico que integra teoría y práctica, orientado a facilitar la toma de decisiones éticas informadas en los diferentes contextos asistenciales, comunitarios y administrativos donde se desempeña la enfermería.</p>
+
+      <p>Este manual está dirigido tanto a estudiantes como a profesionales en ejercicio, y busca promover una actuación reflexiva, basada en el respeto por la vida, la dignidad humana y los principios de la ética profesional. A través de casos interactivos, recursos legales, infografías, simulaciones y actividades de autoevaluación, podrás desarrollar competencias esenciales para enfrentar dilemas éticos cotidianos.</p>
+
+      <p>Además, incluimos un <strong>buscador legal</strong> que te permitirá consultar normas vigentes, códigos deontológicos y disposiciones constitucionales relevantes para la profesión, así como secciones dedicadas a la <strong>formación continua</strong> y a la <strong>promoción de una cultura ética institucional</strong>.</p>
+
+      <p>Te invitamos a explorar cada sección del sitio, interactuar con los materiales disponibles y fortalecer tu rol como agente de cambio en los sistemas de salud, promoviendo el cuidado integral, la justicia, la autonomía del paciente y el compromiso social propio de la enfermería ética.</p>
     </section>
+  </main>
+  
+  <main>
+    <section>
+      <h2>Introduccion</h2>
+      <p>El ejercicio de la enfermería en el entorno clínico exige un compromiso constante con los principios éticos que sustentan la profesión, tales como el respeto por la vida, la dignidad humana, la autonomía del paciente y la justicia en el acceso a la atención. En este contexto, el profesional de enfermería se convierte en un actor clave en la toma de decisiones que pueden tener un impacto directo sobre la salud y el bienestar de las personas y sus familias.
+
+La ética en el ámbito clínico no se limita a la aplicación mecánica de normas o protocolos. Implica una reflexión crítica ante cada situación que desafía los valores personales y profesionales del enfermero o enfermera. Aspectos como la confidencialidad, el consentimiento informado, el trato digno, la comunicación honesta y la gestión del dolor y el sufrimiento deben ser abordados con sensibilidad y criterio ético en cada intervención.
+
+La relación con el paciente debe estar basada en la confianza, el respeto mutuo y la empatía. Esto requiere habilidades de escucha activa, comunicación asertiva y capacidad para identificar situaciones de vulnerabilidad que puedan generar conflictos éticos, como la negligencia, el abandono, la discriminación o el uso inapropiado de procedimientos médicos. Así mismo, el profesional de enfermería tiene la responsabilidad de velar por la seguridad del paciente y actuar como su defensor frente a decisiones clínicas que puedan afectarlo negativamente.
+
+El entorno clínico también presenta retos relacionados con el trabajo en equipo, la jerarquía institucional, la presión asistencial y los dilemas que surgen cuando los recursos son limitados o las decisiones del paciente van en contra de las recomendaciones médicas. En estos casos, la formación ética del profesional se vuelve indispensable para actuar con integridad, responsabilidad y humanidad, sin perder de vista los principios del cuidado centrado en la persona.
+
+En suma, el desempeño ético en el entorno clínico representa una dimensión esencial del quehacer enfermero. No solo garantiza la calidad del cuidado, sino que también contribuye a fortalecer la confianza en el sistema de salud y a dignificar la labor de quienes, día a día, acompañan a los pacientes en sus momentos más críticos con vocación, compromiso y sensibilidad humana..</p>
   </main>
 
   <footer>
     <p>&copy; 2025 Manual Ético Interactivo - Enfermería Colombia</p>
   </footer>
+
+  <script>
+    // Espera al menos 2 segundos antes de ocultar el loader
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").classList.add("fade-out");
+        document.body.classList.add("loaded");
+      }, 2000); // 2 segundos
+    });
+  </script>
 </body>
 </html>
