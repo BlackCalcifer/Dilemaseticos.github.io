@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Cuerpo */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f8fb;
+  background-color: #f9f9f9;
   color: #333;
 }
 
+/* Encabezado */
 header {
   background-color: #004080;
   color: white;
@@ -18,12 +20,19 @@ header {
   text-align: center;
 }
 
+/* Navegación */
 nav ul {
   list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 1em;
   margin-top: 0.5em;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
 }
 
 nav a {
@@ -34,26 +43,53 @@ nav a {
   display: block;
 }
 
+/* Dropdown: submenú */
+nav li:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #004080;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 0 0 8px 8px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #003060;
+}
+
+/* Contenido principal */
 main {
   padding: 2em;
 }
 
-#simulacion-container {
-  background-color: white;
-  padding: 2em;
+/* Secciones */
+section {
+  margin-bottom: 2em;
+  background-color: #fff;
+  padding: 1.5em;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Botones */
 button {
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
   background-color: #0066cc;
   color: white;
   border: none;
-  padding: 0.7em 1.5em;
-  margin: 1em 0.5em;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -62,27 +98,20 @@ button:hover {
   background-color: #004d99;
 }
 
-.opcion {
-  display: block;
-  background-color: #e0ecff;
-  margin: 0.5em 0;
-  padding: 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.opcion:hover {
-  background-color: #c2ddff;
-}
-
+/* Oculto */
 .oculto {
   display: none;
 }
 
+/* Pie de página */
 footer {
   text-align: center;
   background-color: #004080;
   color: white;
   padding: 1em;
+  margin-top: 2em;
+}
+#contenedor-casos button {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
 }

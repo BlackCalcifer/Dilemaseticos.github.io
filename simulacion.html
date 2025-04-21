@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simulación Ética</title>
+  <title>Simulación de Casos Clínico-Éticos</title>
   <link rel="stylesheet" href="simulacion.css" />
-  <script src="simulacion.js" defer></script>
 </head>
 <body>
+
   <header>
-    <h1>Simulación Ética en Enfermería</h1>
+    <h1>Manual Ético Interactivo en Enfermería</h1>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="casos.html">Casos Éticos</a></li>
-        <li><a href="trivia.html">Trivia Ética</a></li>
-        <li><a href="simulacion.html">Simulación</a></li>
+        <li class="dropdown">
+          <a href="casos.html">Casos Éticos</a>
+          <div class="dropdown-content">
+            <a href="trivia.html">Trivia Ética</a>
+            <a href="simulacion.html">Simulación</a>
+          </div>
+        </li>
+        <li><a href="buscador.html">Buscador Legal</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="constitucion.html">Constitución y Código</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="simulacion-container">
-      <h2 id="titulo-caso"></h2>
-      <div id="descripcion-caso"></div>
-      <div id="opciones"></div>
-      <button id="siguiente" class="oculto">Siguiente Decisión</button>
-      <p id="resultado"></p>
-    </section>
-  </main>
+  <main id="contenedor-casos"></main>
 
   <footer>
-    <p>&copy; 2025 Manual Ético Interactivo - Enfermería Colombia</p>
+    <p>&copy; 2025 - Simulación Ética</p>
   </footer>
+
+  <script src="simulacion.js"></script>
 </body>
 </html>
