@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buscador Legal</title>
+  <link rel="stylesheet" href="simulacion.css" />
+</head>
+<body>
+  <header>
+    <h1>Manual Ético Interactivo en Enfermería</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="casos.html" class="dropbtn">Casos Éticos</a>
+          <div class="dropdown-content">
+            <a href="trivia.html">Trivia Ética</a>
+            <a href="simulacion.html">Simulación</a>
+          </div>
+        </li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="constitucion.html">Constitución y Código</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Buscador Legal en Normativa Colombiana</h2>
+      <p>
+        Usa este buscador para consultar directamente en sitios oficiales como el Ministerio de Salud, normas éticas, leyes, derechos del paciente y deberes del profesional en Colombia.
+      </p>
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <input 
+          type="text" 
+          name="q" 
+          id="busquedaGoogle" 
+          placeholder="Ej: Ley 911 de 2004, Código Deontológico de Enfermería, consentimiento informado..." 
+          style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" 
+          required
+        />
+        <input type="hidden" name="sitesearch" value="minsalud.gov.co normativa.minsalud.gov.co saludcapital.gov.co secretaria salud.gov.co">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Simulación Ética</p>
+  </footer>
+</body>
+</html>
